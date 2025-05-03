@@ -1,5 +1,5 @@
 if not LoadResourceFile(cache.resource, 'web/build/index.html') then
-	error('Unable to load UI. Build ox_doorlock or download the latest release.\n	^3https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip^0')
+	error('Unable to load UI. Build ox_doorlock or download the latest release.\n	^3https://github.com/communityox/ox_doorlock/releases/latest/download/ox_doorlock.zip^0')
 end
 
 if not lib.checkDependency('ox_lib', '3.30.4', true) then return end

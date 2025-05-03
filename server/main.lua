@@ -1,12 +1,12 @@
 if not LoadResourceFile(cache.resource, 'web/build/index.html') then
 	error(
-		'Unable to load UI. Build ox_doorlock or download the latest release.\n	^3https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip^0')
+		'Unable to load UI. Build ox_doorlock or download the latest release.\n	^3https://github.com/communityox/ox_doorlock/releases/latest/download/ox_doorlock.zip^0')
 end
 
 if not lib.checkDependency('oxmysql', '2.4.0') then return end
 if not lib.checkDependency('ox_lib', '3.30.4') then return end
 
-lib.versionCheck('overextended/ox_doorlock')
+lib.versionCheck('communityox/ox_doorlock')
 require 'server.convert'
 
 local utils = require 'server.utils'
