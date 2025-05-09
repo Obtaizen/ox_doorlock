@@ -128,3 +128,7 @@ end)
   - Custom difficulty area size.
 - Speed multiplier
   - Custom difficulty idicator speed.
+
+![Discord_hFRE5rkVbc](https://github.com/user-attachments/assets/86a27003-8d5d-46f5-a0e8-2c9d220b3c64)
+![Discord_qiw4HcO3gz](https://github.com/user-attachments/assets/cf8a35f6-940c-409a-88c1-0ebdee731a96)
+
