@@ -345,6 +345,20 @@ RegisterNetEvent('ox_doorlock:breakLockpick', function()
 	return player and DoesPlayerHaveItem(player, Config.LockpickItems, true)
 end)
 
+RegisterNetEvent('ox_doorlock:teleportToDoor', function(id)
+	if not IsPlayerAceAllowed(source, 'command.doorlock') then
+		return
+	end
+	
+	local door = doors[id]
+	if not door or not door.coords then
+		return
+	end
+	
+	local ped = GetPlayerPed(source)
+	SetEntityCoords(ped, door.coords.x, door.coords.y, door.coords.z, false, false, false, false)
+end)
+
 lib.addCommand('doorlock', {
 	help = locale('create_modify_lock'),
 	params = {
