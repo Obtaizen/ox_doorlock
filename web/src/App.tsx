@@ -17,13 +17,23 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: theme.spacing.md,
   },
 
   main: {
-    width: 700,
-    height: 500,
-    backgroundColor: theme.colors.dark[8],
-    borderRadius: theme.radius.sm,
+    width: 760,
+    maxWidth: '92vw',
+    height: 520,
+    background: 'linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02))',
+    border: `1px solid ${theme.fn.rgba(theme.colors.gray[4], 0.25)}`,
+    boxShadow: '0 30px 70px rgba(0, 0, 0, 0.45)',
+    borderRadius: theme.radius.md,
+    backdropFilter: 'blur(14px)',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing.md,
+    padding: theme.spacing.md,
+    overflow: 'hidden',
   },
 
   search: {

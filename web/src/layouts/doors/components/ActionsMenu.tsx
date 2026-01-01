@@ -1,4 +1,4 @@
-import { ActionIcon, Menu, Text, Tooltip } from '@mantine/core';
+﻿import { ActionIcon, Menu, Text, Tooltip } from '@mantine/core';
 import { TbDots, TbSettings, TbTrash } from 'react-icons/tb';
 import { HiOutlineClipboardCopy } from 'react-icons/hi';
 import { GiTeleport } from 'react-icons/gi';
@@ -17,11 +17,36 @@ const ActionsMenu: React.FC<{ data: CellContext<DoorColumn, unknown> }> = ({ dat
   const setClipboard = useClipboard((state) => state.setClipboard);
   const setVisible = useVisibility((state) => state.setVisible);
   return (
-    <Menu position="right-start" width={200}>
+    <Menu
+      position="right-start"
+      width={220}
+      shadow="md"
+      radius="md"
+      transition="pop"
+      styles={(theme) => ({
+        dropdown: {
+          background: theme.fn.rgba(theme.colors.dark[7], 0.85),
+          border: `1px solid ${theme.fn.rgba(theme.colors.gray[4], 0.15)}`,
+          backdropFilter: 'blur(8px)',
+        },
+        item: {
+          borderRadius: theme.radius.md,
+        },
+      })}
+    >
       <Menu.Target>
         <Tooltip label="Door actions">
-          <ActionIcon color="blue.4" variant="transparent">
-            <TbDots size={24} />
+          <ActionIcon
+            color="cyan"
+            variant="subtle"
+            radius="md"
+            size="md"
+            sx={(theme) => ({
+              border: `1px solid ${theme.fn.rgba(theme.colors.cyan[4], 0.35)}`,
+              background: theme.fn.rgba(theme.colors.cyan[4], 0.08),
+            })}
+          >
+            <TbDots size={22} />
           </ActionIcon>
         </Tooltip>
       </Menu.Target>
@@ -54,6 +79,7 @@ const ActionsMenu: React.FC<{ data: CellContext<DoorColumn, unknown> }> = ({ dat
         >
           Teleport to door
         </Menu.Item>
+        <Menu.Divider />
         <Menu.Item
           color="red"
           icon={<TbTrash size={18} />}
